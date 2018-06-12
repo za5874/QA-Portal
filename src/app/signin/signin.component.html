@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+
+    <!-- <form (ngSubmit)="onSignin(f)" #f="ngForm"> -->
+    <form>
+      <!-- 'f' for adding the ngform on the signup.ts file-->
+      <div class="form-group">
+        <label for="email">Mail</label>
+        <input type="email" id="email" name="email" ngModel class="form-control">
+        <!--ngModel register it is as a control in my  template  form -->
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" ngModel class="form-control">
+        <!--ngModel register it is as a control in my  template  form -->
+      </div>
+      <div class="col-xs-12 btn-toolbar">
+        <button class="btn btn-primary" type="submit">Sign In</button>
+        <button class="btn btn-primary" routerLink="/calibration">Calibration</button>
+        <button class="btn btn-primary" routerLink="/department-manager">Department Manager</button>
+        <button class="btn btn-primary" routerLink="/qa-engineer">QA Engineer</button>
+        <button class="btn btn-primary" routerLink="/qa-manager">QA Manager</button>
+        <button class="btn btn-primary" routerLink="/marketer">Marketer</button>
+      </div>
+
+    </form>
+  </div>
+</div>
