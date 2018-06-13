@@ -29,9 +29,13 @@ export class CalibrationFileComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.calService.addCalibrationData(this.calibrationForm.value);
+    this.onCancel(); // returning to calibrtaion table
   }
   
+  onCancel() {
+    this.router.navigate(['../'], {relativeTo: this.route});
 
+  }
 
 
 private initForm () {
