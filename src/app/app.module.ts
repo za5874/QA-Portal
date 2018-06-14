@@ -16,6 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 import { CommonModule } from '@angular/common';
 import { CalibrationService } from './calibration/calibration.service';
+import { TrainingReportComponent } from './department-manager/training-report/training-report.component';
+import { CertificationComponent } from './qa-engineer/certification/certification.component';
 
 
 
@@ -31,7 +33,9 @@ import { CalibrationService } from './calibration/calibration.service';
     QaManagerComponent,
     MarketerComponent,
     CalibrationTableComponent,
-    CalibrationFileComponent
+    CalibrationFileComponent,
+    TrainingReportComponent,
+    CertificationComponent
   ],
   imports: [
     BrowserModule,

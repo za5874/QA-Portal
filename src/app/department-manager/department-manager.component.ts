@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-department-manager',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DepartmentManagerComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+              private router: Router,
+              private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+  }
+  
+  onTrainingReport() {
+    this.router.navigate(['training-report'], {relativeTo: this.route});
   }
 
 }

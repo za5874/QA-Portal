@@ -1,0 +1,112 @@
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+      <form [formGroup]="" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group">
+              <td style="width: 200px; text-align: center">
+                <label for="title">Title :</label>
+              </td>
+              <td><input
+                type="text"
+                id="title"
+                formControlName="title"
+                class="form-control"
+                style="width: 300px"
+                ngModel
+                required></td>
+                <td style="width: 200px; text-align: center">
+                  <label for="trainingCoordinator">Training Coordinator :</label>
+                </td>
+                <td><input
+                  type="text"
+                  id="trainingCoordinator"
+                  formControlName="trainingCoordinator"
+                  class="form-control"
+                  style="width: 300px"
+                  ngModel
+                  required></td>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+              <div class="form-group">
+                <td style="width: 200px; text-align: center">
+                  <label for="generalSubject">General Subject :</label>
+                </td>
+                <td><input
+                  type="text"
+                  id="generalSubject"
+                  formControlName="generalSubject"
+                  class="form-control"
+                  style="width: 300px"
+                  ngModel
+                  required></td>
+                  <td style="width: 200px; text-align: center">
+                    <label for="Issued">Issued</label>
+                  </td>
+                  <td><input
+                    type="text"
+                    id="Issued"
+                    formControlName="Issued"
+                    class="form-control"
+                    style="width: 300px"
+                    ngModel
+                    required></td>
+              </div>
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group">
+              <td style="width: 200px; text-align: center">
+              <label for="subject">Subject : </label>
+              </td>
+              <td><input
+                type="text"
+                id="subject"
+                formControlName="subject"
+                class="form-control"
+                style="width: 300px"
+                ngModel
+                required></td>
+                <td style="width: 200px; text-align: center">
+                    <label for="description">Description : </label>
+                  </td>
+                  <td><input
+                    type="text"
+                    id="description"
+                    formControlName="description"
+                    class="form-control"
+                    style="width: 300px"
+                    ngModel
+                    required></td>
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <hr>
+            <div class="row">
+              <td>
+                <div class="col-xs-12">
+                  <button
+                    type="submit"
+                    class="btn btn-success"
+                    [disabled]="!recipeForm.valid">Save</button>
+                </div></td> 
+                <td>      
+                <div class="col-xs-12">
+                    <button type="button" class="btn btn-danger" >Cancel</button> 
+                </div>
+              </td>
+              </div>      
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
