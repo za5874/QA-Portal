@@ -21,9 +21,13 @@ export class CalibrationTableComponent implements OnInit{//,OnDestroy {
       (calibrationData: Calibration[]) => {
         this.calibrationData = calibrationData;
       }
+     
     );
 
     this.calibrationData = this.calService.getCalibrationData();
+    console.log(this.calibrationData);
+    // if (this.calService.isResult(this.calibrationData[0].operation)) console.log("pass");
+    // else console.log("false");
 
   }
 

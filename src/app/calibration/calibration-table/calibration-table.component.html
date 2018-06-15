@@ -4,30 +4,33 @@
     <h3>Calibration Table</h3>
     <table border = "0" >
       <tr>
-        <td>Serial</td>
-        <td>Tool Name</td>
-        <td>Model</td>
-        <td>Contact Person</td>
-        <td>Department</td>
-        <td>Certification No.</td>
-        <td>Manufacturer</td>
-        <td>New Calibration Date</td>
-        <td>Due Date</td>
-        <td>Interval</td>
-        <td>Results</td>
+        <th>Serial</th>
+        <th>Tool Name</th>
+        <!-- <td>Model</td> -->
+        <th>Contact Person</th>
+        <th>Department</th>
+        <!-- <td>Certification No.</td> -->
+        <th>Manufacturer</th>
+        <th>New Calibration Date</th>
+        <th>Due Date</th>
+        <th>Interval</th>
+        <th>Results</th>
       </tr>
+      <tr *ngFor="let calibrationEl of calibrationData;">
+      
+        <td>{{calibrationEl.serialNum}}</td>
+        <td>{{calibrationEl.toolName}}</td>
+        <td>{{calibrationEl.dateCalibration}}</td>
+        
+        
+        <td>{{calibrationEl.manufacturer}}</td>
+        <td>{{calibrationEl.standard}}</td>
+        <td>{{calibrationEl.operation}}</td>
+        <td>{{calibrationEl.result}}</td>
+     
+    </tr>
     </table>
    
-    <div class="col-xs-12">
-      <div *ngFor="let calibrationEl of calibrationData;">
-         {{calibrationEl.toolName}}
-        , {{calibrationEl.dateCalibration}}
-        , {{calibrationEl.serialNum}}
-        , {{calibrationEl.manufacturer}}
-        , {{calibrationEl.standard}}
-        , {{calibrationEl.operation}}
-        , {{calibrationEl.result}}
-      </div>
-    </div>
+    
   </div>
 </div>

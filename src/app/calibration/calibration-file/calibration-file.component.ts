@@ -22,6 +22,7 @@ export class CalibrationFileComponent implements OnInit {
         //this.editMode = params ['id'] != null; //if
         this.initForm(); // to initialize initForm
         //console.log(this.editMode);
+      
         
   }
   )
@@ -29,7 +30,10 @@ export class CalibrationFileComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.calService.addCalibrationData(this.calibrationForm.value);
+    // if (this.calService.isResult()) console.log("pass");
+    // else console.log("false");
     this.onCancel(); // returning to calibrtaion table
+    
   }
   
   onCancel() {
