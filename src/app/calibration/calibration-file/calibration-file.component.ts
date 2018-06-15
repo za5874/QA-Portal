@@ -32,6 +32,11 @@ export class CalibrationFileComponent implements OnInit {
     this.calService.addCalibrationData(this.calibrationForm.value);
     // if (this.calService.isResult()) console.log("pass");
     // else console.log("false");
+    if (this.calService.isResult(this.calibrationForm.value.operation))
+    {
+      this.calibrationForm.value.result = "Pass";
+    }
+    else this.calibrationForm.value.result = "Fail";
     this.onCancel(); // returning to calibrtaion table
     
   }
