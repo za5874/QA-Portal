@@ -25,8 +25,11 @@
         <td>{{calibrationEl.dateCalibration}}</td>
         <td>{{calibrationEl.standard}}</td>
         <td>{{calibrationEl.operation}}</td>
-        <td >{{calibrationEl.result}}</td>
-        
+        <td *ngIf="calibrationEl.result === 'Pass'; else elseBlock " style="color: green">{{calibrationEl.result}}</td>
+        <ng-template #elseBlock>
+          <td ng-if="calibrationEl.result === 'Fail'" style="color: red">{{calibrationEl.result}}</td>
+        </ng-template>
+        <!-- <td>{{calibrationEl.result}}</td> -->
     </tr>
     </table>
    
