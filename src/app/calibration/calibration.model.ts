@@ -1,6 +1,7 @@
 export class Calibration {
 
-    public dateCalibration: string;
+    public dateCalibration: Date;
+    public dueDateCalibration: Date;
     public toolName: string;
     public serialNum: number;
     public manufacturer: string;
@@ -8,9 +9,10 @@ export class Calibration {
     public operation: number;
     public result: string;
 
-    constructor(dateCalibration: string, toolName: string, serialNum: number, manufacturer: string, standard: number, operation: number,
+    constructor(dateCalibration: Date,dueDateCalibration: Date,  toolName: string, serialNum: number, manufacturer: string, standard: number, operation: number,
         result: string) {
         this.dateCalibration = dateCalibration;
+        this.dueDateCalibration = dueDateCalibration;
         this.toolName = toolName;
         this.serialNum = serialNum;
         this.standard = standard;

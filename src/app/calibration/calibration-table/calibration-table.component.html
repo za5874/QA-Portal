@@ -22,7 +22,10 @@
         <td>{{calibrationEl.toolName}}</td>
       
         <td>{{calibrationEl.manufacturer}}</td>
-        <td>{{calibrationEl.dateCalibration}}</td>
+        <td>{{calibrationEl.dateCalibration}} </td>
+        <td>{{calibrationEl.dueDateCalibration | date: "dd/MM/yyyy"}}</td>
+      
+       
         <td>{{calibrationEl.standard}}</td>
         <td>{{calibrationEl.operation}}</td>
         <td *ngIf="calibrationEl.result === 'Pass'; else elseBlock " style="color: green">{{calibrationEl.result}}</td>

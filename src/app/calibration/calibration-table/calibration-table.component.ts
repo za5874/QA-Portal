@@ -13,6 +13,7 @@ export class CalibrationTableComponent implements OnInit{//,OnDestroy {
    calibrationData : Calibration[];
    subsctiption: Subscription; // store the subscription for destroy
     index : number =0;
+    
   constructor(private calService: CalibrationService) { }
 
   ngOnInit() {
@@ -25,6 +26,7 @@ export class CalibrationTableComponent implements OnInit{//,OnDestroy {
     );
 
     this.calibrationData = this.calService.getCalibrationData();
+    
     console.log(this.index);
     console.log(this.calibrationData);
   
