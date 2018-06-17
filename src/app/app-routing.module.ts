@@ -11,7 +11,7 @@ import { CalibrationFileComponent } from "./calibration/calibration-file/calibra
 import { TrainingReportComponent } from "./department-manager/training-report/training-report.component";
 import { CertificationComponent } from "./qa-engineer/certification/certification.component";
 import { QaEngineerComponent } from "./qa-engineer/qa-engineer.component";
-
+import { StatusReportComponent } from "./qa-engineer/status-report/status-report.component";
 //import { HomeComponent } from "./core/home/home.component";
 
 
@@ -25,6 +25,7 @@ const appRoutes: Routes = [
     ] },
     { path: 'qa-engineer', component: QaEngineerComponent, children: [
         { path: ':certiication', component: CertificationComponent},
+        { path: ':status-report', component: StatusReportComponent},
     ] },
 
     { path: 'qa-manager', component: QaManagerComponent },
