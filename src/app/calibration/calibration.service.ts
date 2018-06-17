@@ -4,9 +4,11 @@ import { Calibration } from "./calibration.model";
 
 @Injectable()
 export class CalibrationService {
-    
+    private date= new Date(2018,1,1);
+    private dueDate= new Date(2020,1,1);
     calibrationChanged = new Subject<Calibration[]>(); // for updateCalibration
-    private calibrations: Calibration[] = [new Calibration('1/1/2018', 'Nova', 1, 'NFZ', 20, 21, 'Pass')];
+
+    private calibrations: Calibration[] = [new Calibration(this.date,this.dueDate, 'Nova', 1, 'NFZ', 20, 21, 'Pass')];
 
 
     getCalibrationData() {
@@ -18,10 +20,15 @@ export class CalibrationService {
         this.calibrationChanged.next(this.calibrations.slice()); // move a copy of the array of Recipes[]
         
       }
-    isResult( operation : number) {
-        if (operation <= 18)  
+    isResult( result : number) {
+        if (result < -2 || result >2)  
         return false;
         else return true;
+    }
+
+    setNextYear (date : Date) {
+        date.setFullYear(date.getFullYear()+1);
+        return date;
     }
 
 
