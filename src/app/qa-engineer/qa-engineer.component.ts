@@ -8,13 +8,18 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class QaEngineerComponent implements OnInit {
 
+
   constructor(
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit() {
     
+  }
+
+  onStatusReport(){
+    this.router.navigate(['status-report'], {relativeTo: this.route});
   }
 
   onCertTable(){
@@ -22,7 +27,5 @@ export class QaEngineerComponent implements OnInit {
     
   }
 
-  onStatusReport(){
-    this.router.navigate(['status-report'], {relativeTo: this.route});
-  }
+
 }

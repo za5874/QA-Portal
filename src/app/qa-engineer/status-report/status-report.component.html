@@ -1,3 +1,135 @@
-<p>
-  status-report works!
-</p>
+<form [formGroup]="" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="form-group">
+          <td style="width: 200px; text-align: center">
+            <label for="title">Vendor Name :</label>
+          </td>
+          <td><input
+            type="text"
+            id="title"
+            formControlName="title"
+            class="form-control"
+            style="width: 300px"
+            ngModel
+            required></td>
+            <td style="width: 200px; text-align: center">
+              <label for="trainingCoordinator">Location :</label>
+            </td>
+            <td><input
+              type="text"
+              id="trainingCoordinator"
+              formControlName="trainingCoordinator"
+              class="form-control"
+              style="width: 300px"
+              ngModel
+              required></td>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <td style="width: 200px; text-align: center">
+              <label for="generalSubject">Supplier Class :</label>
+            </td>
+            <td><input
+              type="text"
+              id="generalSubject"
+              formControlName="generalSubject"
+              class="form-control"
+              style="width: 300px"
+              ngModel
+              required></td>
+              <td style="width: 200px; text-align: center">
+                <label for="Issued">Audit Planned Quarter : </label>
+              </td>
+              <td><input
+                type="text"
+                id="Issued"
+                formControlName="Issued"
+                class="form-control"
+                style="width: 300px"
+                ngModel
+                required></td>
+          </div>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="form-group">
+          <td style="width: 200px; text-align: center">
+          <label for="subject">Last Audit Date : </label>
+          </td>
+          <td><input
+            type="text"
+            id="subject"
+            formControlName="subject"
+            class="form-control"
+            style="width: 300px"
+            ngModel
+            required></td>
+            <td style="width: 200px; text-align: center">
+                <label for="description">New Vendor Approval : </label>
+              </td>
+              <td><input
+                type="text"
+                id="description"
+                formControlName="description"
+                class="form-control"
+                style="width: 300px"
+                ngModel
+                required></td>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <td style="width: 300px; text-align: center">
+            <label for="subject">Supplier Certification Description : </label>
+            </td>
+            <td><input
+              type="text"
+              id="subject"
+              formControlName="subject"
+              class="form-control"
+              style="width: 600px"
+              ngModel
+              required></td>
+          </div>
+        </div>
+      </div>
+       <div class="row">
+      <div class="col-xs-12">
+        <div class="form-group">
+          <td style="width: 200px; text-align: center">
+          <label for="subject">Auditor Name : </label>
+          </td>
+          <td><input
+            type="text"
+            id="subject"
+            formControlName="subject"
+            class="form-control"
+            style="width: 300px"
+            ngModel
+            required></td>
+            <td 
+            style=" width: 600px; text-align: center"
+            ngModel
+            required>
+              <button type="button" class="btn" style="" >Upload Audit Report</button> 
+            </td>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12" style="float: left; width: 130px">
+          <button type="button" class="btn btn-danger" style="" >Back</button> 
+        </div>
+        <div class="col-xs-12" style="float: right; width: 400px">
+            <button type="button" class="btn btn-success" style="" >Submit</button> 
+        </div>
+      </div>
+  </form>

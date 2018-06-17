@@ -24,8 +24,8 @@ const appRoutes: Routes = [
         { path: ':training-report', component: TrainingReportComponent},
     ] },
     { path: 'qa-engineer', component: QaEngineerComponent, children: [
-        { path: ':certiication', component: CertificationComponent},
         { path: ':status-report', component: StatusReportComponent},
+        { path: ':certiication', component: CertificationComponent},
     ] },
 
     { path: 'qa-manager', component: QaManagerComponent },
