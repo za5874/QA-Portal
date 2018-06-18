@@ -6,25 +6,22 @@
         <div class="col-xs-12">
           <div class="form-group">
 
-            <td style="width: 200px; text-align: center">
+            
               <label for="generalSubject">Training Coordinator :</label>
-            </td>
-            <td>
-              <input type="text" id="generalSubject" formControlName="generalSubject" class="form-control" style="width: 300px"
-                ngModel required>
-            </td>
-          </div>
+              <input type="text" id="generalSubject" formControlName="generalSubject" class="form-control" style="width: 300px" ngModel
+               required>
+             </div>
         </div>
       </div>
+      
       <div class="row">
         <div class="col-xs-12">
           <div class="form-group">
-            <td style="width: 200px; text-align: center">
+            <div style="width: 100px; text-align: left">
               <label for="subject">General Subject :</label>
-            </td>
-            <td>
+            </div>
+            
               <input type="text" id="subject" formControlName="subject" class="form-control" style="width: 300px" ngModel required>
-            </td>
 
             <td style="width: 200px; text-align: center">
               <label for="Issued">Issued</label>
@@ -35,8 +32,8 @@
           </div>
         </div>
       </div>
-      
-      
+
+
       <div class="row">
         <div class="col-xs-12">
           <div class="form-group">
@@ -50,19 +47,41 @@
               <label for="description">Description : </label>
             </td>
             <td>
-              <input type="text" id="description" formControlName="description" class="form-control" style="width: 300px" ngModel
-                required>
+              <input type="text" id="description" formControlName="description" class="form-control" style="width: 300px" ngModel required>
             </td>
           </div>
         </div>
       </div>
+
+      <h2> Training Report List</h2>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <table border=0>
+            <div class="form-group">
+            <tr>
+              <th>Department</th>
+              <th>Employee Name</th>
+
+            </tr>
+                <td>
+                    <input type="text" id="subject" formControlName="subject" class="form-control" style="width: 300px" ngModel required>
+                  </td>
+            </div>
+
+          </table>
+        </div>
+      </div>
+
+
+
       <div class="row">
         <div class="col-xs-12">
           <hr>
           <div class="row">
             <td>
               <div class="col-xs-12">
-                <button type="submit" class="btn btn-success" [disabled]="!recipeForm.valid">Save</button>
+                <button type="submit" class="btn btn-success">Save</button>
               </div>
             </td>
             <td>
@@ -74,5 +93,6 @@
         </div>
       </div>
     </form>
+
   </div>
 </div>
