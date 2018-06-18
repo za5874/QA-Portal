@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-qa-manager',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QaManagerComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+  ) { }
 
   ngOnInit() {
   }
 
+  onCertTable(){
+    this.router.navigate(['../qa-engineer/certification'], {relativeTo: this.route});
+  }
+  onStatusTable(){
+    this.router.navigate(['status-table'], {relativeTo: this.route});
+  }
+  onTrainingTable(){
+    this.router.navigate(['training-table'], {relativeTo: this.route});
+  }
 }

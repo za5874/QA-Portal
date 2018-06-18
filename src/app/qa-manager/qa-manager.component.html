@@ -16,10 +16,12 @@
 <h2>Welcome QA Manager</h2>
 <div class="row">
   <div class="col-xs-12">
-    <button class="btn-primary" type="button"> Supplier Certification Table</button>
-    <button class="btn-primary" type="button">Audit Supplier Status Report</button>
-    <button class="btn-primary" type="button">Training Table</button>
+    <button class="btn btn-primary" (click)="onCertTable()"> Supplier Certification Table</button>
+    <button class="btn btn-primary" (click)="onStatusTable()">Audit Supplier Status Table</button>
+    <button class="btn btn-primary" (click)="onTrainingTable()">Training Table</button>
     <button class="btn-primary" type="button">Statistics</button>
     <h1>Notifications</h1>
   </div>
 </div>
+<hr>
+<router-outlet></router-outlet>
