@@ -43,10 +43,12 @@ export class CalibrationFileComponent implements OnInit {
     
     
      this.dueDate = this.calibrationForm.value.dateCalibration;
+
+     this.calibrationForm.value.dueDateCalibration = this.dueDate;
    //  this.calibrationForm.value.dueDateCalibration = this.calService.setNextYear(this.dueDate);
       // this.dueDate.setFullYear(this.dueDate.getFullYear()+1);
      
-    // this.calibrationForm.value.dueDateCalibration = this.dueDate;
+    
       // this.dueDate = this.calService.setNextYear(this.dueDate);
       //  console.log(this.dueDate);
     this.onCancel(); // returning to calibrtaion table
@@ -57,7 +59,6 @@ export class CalibrationFileComponent implements OnInit {
     this.router.navigate(['../'], {relativeTo: this.route});
 
   }
-
 
 private initForm () {
     let calDateCalibration = '';

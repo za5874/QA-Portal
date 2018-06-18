@@ -21,7 +21,7 @@ const appRoutes: Routes = [
     { path: 'calibration', component: CalibrationComponent },
     { path: 'calibration/calibrationfile', component: CalibrationFileComponent },
     { path: 'department-manager', component: DepartmentManagerComponent, children: [
-        { path: ':training-report', component: TrainingReportComponent},
+        { path: 'training-report', component: TrainingReportComponent},
     ] },
     { path: 'qa-engineer', component: QaEngineerComponent, children: [
         { path: 'certiication', component: CertificationComponent},
