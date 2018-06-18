@@ -6,6 +6,8 @@ import { HomeComponent } from "./home/home.component";
 import { DepartmentManagerComponent } from "./department-manager/department-manager.component";
 //import { QaEngineerComponent } from "./qa-engineer/qa-engineer.component";
 import { QaManagerComponent } from "./qa-manager/qa-manager.component";
+import { StatusTableComponent } from "./qa-manager/status-table/status-table.component";
+import { TrainingTableComponent } from "./qa-manager/training-table/training-table.component";
 import { MarketerComponent } from "./marketer/marketer.component";
 import { CalibrationFileComponent } from "./calibration/calibration-file/calibration-file.component";
 import { TrainingReportComponent } from "./department-manager/training-report/training-report.component";
@@ -24,11 +26,14 @@ const appRoutes: Routes = [
         { path: ':training-report', component: TrainingReportComponent},
     ] },
     { path: 'qa-engineer', component: QaEngineerComponent, children: [
-        { path: 'certiication', component: CertificationComponent},
+        { path: 'certification', component: CertificationComponent},
         { path: 'status-report', component: StatusReportComponent},
     ] },
 
-    { path: 'qa-manager', component: QaManagerComponent },
+    { path: 'qa-manager', component: QaManagerComponent, children: [
+        {path: 'status-table', component: StatusTableComponent},
+        {path: 'training-table', component: TrainingTableComponent},
+    ] },
     { path: 'marketer', component: MarketerComponent }
     
    

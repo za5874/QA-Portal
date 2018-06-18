@@ -19,6 +19,8 @@ import { CalibrationService } from './calibration/calibration.service';
 import { TrainingReportComponent } from './department-manager/training-report/training-report.component';
 import { CertificationComponent } from './qa-engineer/certification/certification.component';
 import { StatusReportComponent } from './qa-engineer/status-report/status-report.component';
+import { StatusTableComponent } from './qa-manager/status-table/status-table.component';
+import { TrainingTableComponent } from './qa-manager/training-table/training-table.component';
 
 
 
@@ -37,7 +39,9 @@ import { StatusReportComponent } from './qa-engineer/status-report/status-report
     CalibrationFileComponent,
     TrainingReportComponent,
     CertificationComponent,
-    StatusReportComponent
+    StatusReportComponent,
+    StatusTableComponent,
+    TrainingTableComponent
   ],
   imports: [
     BrowserModule,

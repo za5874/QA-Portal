@@ -23,7 +23,7 @@ export class QaEngineerComponent implements OnInit {
   }
 
   onCertTable(){
-    this.router.navigate(['certiication'], {relativeTo: this.route});
+    this.router.navigate(['certification'], {relativeTo: this.route});
     
   }
 
