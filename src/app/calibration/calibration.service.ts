@@ -16,6 +16,7 @@ export class CalibrationService {
     }
 
     addCalibrationData(calibration: Calibration) {
+        // calibration.dueDateCalibration.setFullYear(calibration.dateCalibration.getFullYear()+1);
         this.calibrations.push(calibration);
         this.calibrationChanged.next(this.calibrations.slice()); // move a copy of the array of Recipes[]
         

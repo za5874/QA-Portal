@@ -1,112 +1,94 @@
 <hr>
 <div class="row">
-    <div class="col-xs-12">
-      <form [formGroup]="" (ngSubmit)="onSubmit()">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="form-group">
-              <td style="width: 200px; text-align: center">
-                <label for="title">Title :</label>
-              </td>
-              <td><input
-                type="text"
-                id="title"
-                formControlName="title"
-                class="form-control"
-                style="width: 300px"
-                ngModel
-                required></td>
-                <td style="width: 200px; text-align: center">
-                  <label for="trainingCoordinator">Training Coordinator :</label>
-                </td>
-                <td><input
-                  type="text"
-                  id="trainingCoordinator"
-                  formControlName="trainingCoordinator"
-                  class="form-control"
-                  style="width: 300px"
-                  ngModel
-                  required></td>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-              <div class="form-group">
-                <td style="width: 200px; text-align: center">
-                  <label for="generalSubject">General Subject :</label>
-                </td>
-                <td><input
-                  type="text"
-                  id="generalSubject"
-                  formControlName="generalSubject"
-                  class="form-control"
-                  style="width: 300px"
-                  ngModel
-                  required></td>
-                  <td style="width: 200px; text-align: center">
-                    <label for="Issued">Issued</label>
-                  </td>
-                  <td><input
-                    type="text"
-                    id="Issued"
-                    formControlName="Issued"
-                    class="form-control"
-                    style="width: 300px"
-                    ngModel
-                    required></td>
-              </div>
-            </div>
-          </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="form-group">
-              <td style="width: 200px; text-align: center">
-              <label for="subject">Subject : </label>
-              </td>
-              <td><input
-                type="text"
-                id="subject"
-                formControlName="subject"
-                class="form-control"
-                style="width: 300px"
-                ngModel
-                required></td>
-                <td style="width: 200px; text-align: center">
-                    <label for="description">Description : </label>
-                  </td>
-                  <td><input
-                    type="text"
-                    id="description"
-                    formControlName="description"
-                    class="form-control"
-                    style="width: 300px"
-                    ngModel
-                    required></td>
+  <div class="col-xs-12">
+    <form [formGroup]="TrainingForm" (ngSubmit)="onSubmit()">
 
+      <div class="row">
+        <div class="col-sm-4 form-group">
+          <label for="generalSubject">General Subject :</label>
+          <input type="text" id="generalSubject" formControlName="generalSubject" class="form-control" style="width: 200px" ngModel
+            required>
+
+
+        </div>
+
+        <div class="col-sm-3 form-group">
+          <label for="trainingCoordinator">Training Coordinator :</label>
+          <input type="text" id="trainingCoordinator" formControlName="trainingCoordinator" class="form-control" style="width: 150px"
+            ngModel required>
+        </div>
+
+
+      </div>
+      <!--General subject and Training Coordinator-->
+
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <div style="width: 100px; text-align: left">
+              <label for="subject">Subject :</label>
             </div>
+            <input type="text" id="subject" formControlName="subject" class="form-control" style="width: 200px" ngModel required>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <hr>
-            <div class="row">
+
+        <div class="col-sm-3">
+          <label for="Issued">Issued: </label>
+          <input type="date" id="Issued" formControlName="Issued" class="form-control" style="width: 160px" ngModel required>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <div style="width: 100px; text-align: left">
+              <label for="description">Description :</label>
+            </div>
+            <input type="text" id="description" formControlName="description" class="form-control" style="width: 200px" ngModel required>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <!-- Table -->
+
+      <b style="font-size: 150%;"> Training Report List</b>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <table border=0>
+            <div class="form-group">
+              <tr>
+                <th>Department</th>
+                <th>Employee Name</th>
+
+              </tr>
               <td>
-                <div class="col-xs-12">
-                  <button
-                    type="submit"
-                    class="btn btn-success"
-                    [disabled]="!recipeForm.valid">Save</button>
-                </div></td> 
-                <td>      
-                <div class="col-xs-12">
-                    <button type="button" class="btn btn-danger" >Cancel</button> 
-                </div>
+                <input type="text" id="subject" formControlName="subject" class="form-control" style="width: 300px" ngModel required>
               </td>
-              </div>      
-          </div>
+
+              <td>
+                <input type="text" id="subject" formControlName="subject" class="form-control" style="width: 300px" ngModel required>
+              </td>
+            </div>
+
+          </table>
         </div>
-      </form>
-    </div>
+      </div>
+
+
+      <!-- buttons -->
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="submit" class="btn btn-success">Submit</button>
+          <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+        </div>
+      </div>
+
+
+    </form>
   </div>
-  
+</div>
