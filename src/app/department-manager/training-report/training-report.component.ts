@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 import { ActivatedRoute, Router, Params } from '@angular/router';
+import { DepartmentService } from '../department.service';
 
 
 
@@ -16,7 +17,7 @@ export class TrainingReportComponent implements OnInit {
 
 
 
-  constructor(private route: ActivatedRoute,
+  constructor(private depService: DepartmentService,private route: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit() {
@@ -33,8 +34,15 @@ export class TrainingReportComponent implements OnInit {
       )
   }
 
-  onSubmit() { }
-  onCancel() { }
+  onSubmit() {
+    this.depService.addDepartmentData(this.trainingForm.value);
+  
+    this.onCancel();
+  }
+    onCancel() { 
+      this.router.navigate(['../'], {relativeTo: this.route});
+
+    }
   
   
   private initForm() {
