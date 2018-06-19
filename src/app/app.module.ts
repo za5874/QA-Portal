@@ -17,13 +17,15 @@ import {HttpClientModule} from '@angular/common/http'
 import { CommonModule } from '@angular/common';
 import { CalibrationService } from './calibration/calibration.service';
 import { TrainingReportComponent } from './department-manager/training-report/training-report.component';
-import { CertificationComponent } from './qa-engineer/certification/certification.component';
+import { Certification1Component } from './qa-engineer/certification/certification.component';
 import { StatusReportComponent } from './qa-engineer/status-report/status-report.component';
 
 import { DepartmentService } from './department-manager/department.service';
 
 import { StatusTableComponent } from './qa-manager/status-table/status-table.component';
 import { TrainingTableComponent } from './qa-manager/training-table/training-table.component';
+import { Certification2Component } from './qa-manager/certification/certification.component';
+
 
 
 
@@ -41,10 +43,11 @@ import { TrainingTableComponent } from './qa-manager/training-table/training-tab
     CalibrationTableComponent,
     CalibrationFileComponent,
     TrainingReportComponent,
-    CertificationComponent,
+    Certification1Component,
     StatusReportComponent,
     StatusTableComponent,
-    TrainingTableComponent
+    TrainingTableComponent,
+    Certification2Component
   ],
   imports: [
     BrowserModule,

@@ -17,7 +17,7 @@ export class QaManagerComponent implements OnInit {
   }
 
   onCertTable(){
-    this.router.navigate(['../qa-engineer/certification'], {relativeTo: this.route});
+    this.router.navigate(['certificationB'], {relativeTo: this.route});
   }
   onStatusTable(){
     this.router.navigate(['status-table'], {relativeTo: this.route});
