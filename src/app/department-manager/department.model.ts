@@ -1,3 +1,5 @@
+import { DepartmentMember } from "../shared/departmentMember.model";
+
 export class Department {
 
     public generalSubject: string;
@@ -5,21 +7,17 @@ export class Department {
     public description: string;
     public trainingCoordinator: string;
     public issued: Date;
+    public departmentMembers : DepartmentMember[];
     
-    // 'generalSubject': new FormControl(trGeneralSubject, Validators.required),
-    // 'subject': new FormControl(trSubject, Validators.required),
-    // 'description': new FormControl(trDescription, Validators.required),
-    // 'trainingCoordinator': new FormControl(trTrainingCoordinator, Validators.required),
-    // 'issued': new FormControl(new Date(trIssued), Validators.required)
-
+   
 
     constructor(generalSubject: string,subject: string, description: string, trainingCoordinator: string,
-        issued: Date) {
+        issued: Date, departmentMembers : DepartmentMember[]) {
         this.generalSubject = generalSubject;
         this.subject = subject;
         this.description = description;
         this.trainingCoordinator = trainingCoordinator;
         this.issued = issued;
-        
+        this.departmentMembers = departmentMembers;
     }
 }
