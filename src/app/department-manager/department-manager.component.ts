@@ -21,4 +21,8 @@ export class DepartmentManagerComponent implements OnInit {
     this.router.navigate(['training-report'], {relativeTo: this.route});
   }
 
+  onTrainingTable() {
+    this.router.navigate(['training-table'], {relativeTo: this.route});
+  }
+
 }

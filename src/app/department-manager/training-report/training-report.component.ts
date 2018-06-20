@@ -34,12 +34,11 @@ export class TrainingReportComponent implements OnInit {
 
   onSubmit() {
     this.depService.addDepartmentData(this.trainingForm.value);
-  
-    this.onCancel();
+    // console.log(this.trainingForm);
+   // this.onCancel();
   }
     onCancel() { 
-      this.router.navigate(['../'], {relativeTo: this.route});
-
+         this.router.navigate(['../'], {relativeTo: this.route});
     }
   
     getControls() {
@@ -56,6 +55,9 @@ export class TrainingReportComponent implements OnInit {
   
       }
 
+      onDeleteDepartmentMember(index: number ) {
+        (<FormArray>this.trainingForm.get('departmentMembers')).removeAt(index);
+    }
 
 
 
@@ -68,6 +70,10 @@ export class TrainingReportComponent implements OnInit {
     let trTrainingCoordinator = '';
     let trIssued = '';
     let trDepartmentMembers = new FormArray([]); // [] initialize with empty array
+
+    
+     
+    
 
     this.trainingForm = new FormGroup({
 

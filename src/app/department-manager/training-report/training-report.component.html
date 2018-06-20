@@ -6,8 +6,8 @@
       <div class="row">
         <div class="col-sm-4 form-group">
           <label for="generalSubject">General Subject :</label>
-          <input type="text" id="generalSubject" formControlName="generalSubject" class="form-control" style="width: 200px" ngModel
-            required>
+          <input type="text" id="generalSubject" formControlName="generalSubject" class="form-control" style="width: 200px" 
+          placeholder="QA-100XXXXX"ngModel required>
 
 
         </div>
@@ -58,43 +58,57 @@
       <b style="font-size: 150%;"> Training Report List</b>
 
       <div class="row">
-        <div class="col-xs-12" formArrayName="departmentMembers">
-          <!-- <table border=0> -->
-            <table>
-            <div class="form-group">
-              <tr>
-                <th>Department</th>
-                <th>Employee Name</th>
-              </tr>
-            <!-- </div> -->
+        <div class="col-xs-12">
+
+          <table formArrayName="departmentMembers" border=0>
+            <!-- <div class="form-group"> -->
+            <tr>
+              <th>Department</th>
+              <th>Employee Name</th>
+
+            </tr>
 
 
-            <div class="row" >
-              <tr  *ngFor="let departmentMembersCtrl of getControls(); let i = index"
-               [formGroupName]="i"
-               style="margin-top: 10px;">
-                <td>
-                  <input type="text" id="departmentName" formControlName="departmentName" class="form-control"
-                   style="width: 200px" ngModel
-                    required>
-                </td>
 
-                <td>
-                  <input type="text" id="employeeName" formControlName="employeeName" class="form-control" 
-                  style="width: 200px" ngModel required>
-                </td>
-              </tr>
-            </div>
-          </div>
+
+            <tr *ngFor="let departmentMembersCtrl of getControls();
+               let i = index" [formGroupName]="i">
+              <td>
+                <input type="text" formControlName="departmentName" class="form-control" 
+                style="columns: ms -8px;" ngModel required>
+              </td>
+
+              <td>
+                <input type="text" formControlName="employeeName" class="form-control" 
+                style="columns: ms -8px;" ngModel required>
+              </td>
+              <td class="col-ms-2">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    (click)="onDeleteDepartmentMember(i)">X</button>
+              </td>
+            </tr>
+
           </table>
+
         </div>
       </div>
 
+      <div class="row">
+        <div class="col-sm-3">
+          <button type="button" class="btn btn-success" (click)="onAddDepartmentMember()" >Add Member</button>
+        </div>
+      </div>
+
+      
+     
+      <hr>
 
       <!-- buttons -->
       <div class="row">
         <div class="col-xs-12">
-          <button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button>
+          <button type="submit" class="btn btn-info" (click)="onSubmit()">Submit</button>
           <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
         </div>
       </div>

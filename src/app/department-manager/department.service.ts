@@ -17,13 +17,18 @@ export class DepartmentService {
 
     getDepartmentData() {
         return this.departments.slice();
-        console.log(this.departments);
+        
     }
 
+    // getDepartmentMember (index: number){ // single departmentData 
+    //     return this.departments[index]; // no need for slice() copy array here
+     
+    //    } 
     addDepartmentData(department: Department) {
         
         this.departments.push(department);
         this.departmentChanged.next(this.departments.slice()); // move a copy of the array of departments[]
+        console.log(department);
         
       }
   
