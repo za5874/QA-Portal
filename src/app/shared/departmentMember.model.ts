@@ -1,4 +1,4 @@
 export class DepartmentMember {
-    constructor(public department: string, public name: number) {}
+    constructor(public departmentName: string, public employeeName: string) {}
   }
   

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
+import { FormGroup, FormControl, Validators, NgForm, FormArray } from '@angular/forms';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { DepartmentService } from '../department.service';
 
@@ -13,8 +13,6 @@ import { DepartmentService } from '../department.service';
 
 export class TrainingReportComponent implements OnInit {
   trainingForm: FormGroup;
-
-
 
 
   constructor(private depService: DepartmentService,private route: ActivatedRoute,
@@ -36,15 +34,34 @@ export class TrainingReportComponent implements OnInit {
 
   onSubmit() {
     this.depService.addDepartmentData(this.trainingForm.value);
-  
-    this.onCancel();
+    // console.log(this.trainingForm);
+   // this.onCancel();
   }
     onCancel() { 
-      this.router.navigate(['../'], {relativeTo: this.route});
-
+         this.router.navigate(['../'], {relativeTo: this.route});
     }
   
+    getControls() {
+      return (<FormArray>this.trainingForm.get('departmentMembers')).controls;
+    }
+
+    onAddDepartmentMember() {
+      (<FormArray>this.trainingForm.get('departmentMembers')).push(
+        new FormGroup ({
+          'departmentName': new FormControl(null, Validators.required),
+          'employeeName': new FormControl(null,Validators.required)
+          })
+      );
   
+      }
+
+      onDeleteDepartmentMember(index: number ) {
+        (<FormArray>this.trainingForm.get('departmentMembers')).removeAt(index);
+    }
+
+
+
+
   private initForm() {
 
     let trGeneralSubject = '';
@@ -52,6 +69,11 @@ export class TrainingReportComponent implements OnInit {
     let trDescription = '';
     let trTrainingCoordinator = '';
     let trIssued = '';
+    let trDepartmentMembers = new FormArray([]); // [] initialize with empty array
+
+    
+     
+    
 
     this.trainingForm = new FormGroup({
 
@@ -59,8 +81,8 @@ export class TrainingReportComponent implements OnInit {
       'subject': new FormControl(trSubject, Validators.required),
       'description': new FormControl(trDescription, Validators.required),
       'trainingCoordinator': new FormControl(trTrainingCoordinator, Validators.required),
-      'issued': new FormControl(new Date(trIssued), Validators.required)
-
+      'issued': new FormControl(new Date(trIssued), Validators.required),
+      'departmentMembers': trDepartmentMembers
     });
   }
 }
