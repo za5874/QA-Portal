@@ -34,11 +34,12 @@ export class StatusReportComponent implements OnInit {
 }
 
   onSubmit(form: NgForm) { 
+    this.onBack();
   }
   
- /* onCancel() {
+  onBack() {
     this.router.navigate(['../'], {relativeTo: this.route});
-  }*/
+  }
 
 private initForm () {
     let calVendorName= '';
@@ -54,7 +55,7 @@ private initForm () {
 
     this.reportForm = new FormGroup({ 
       'vendorName': new FormControl(new Date(calVendorName), Validators.required),
-      'duelocation': new FormControl(new Date(calLocation), Validators.required),
+      'location': new FormControl(new Date(calLocation), Validators.required),
       'supplierClass': new FormControl(calSupplierClass, Validators.required),
       'auditPlannedQuarter': new FormControl(calAuditPlannedQuarter, Validators.required),
       'lastAuditDate': new FormControl(calLastAuditDate, Validators.required),
