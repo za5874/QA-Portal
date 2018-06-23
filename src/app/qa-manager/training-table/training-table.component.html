@@ -1,32 +1,33 @@
   
 <div class="row">
     <div class="col-xs-12">
-      <h3>Audit Supplier Status Table</h3>
+      <h3>Training Table</h3>
     </div>
     <div class="col-xs-12" style="float: left; width: 130px">
       <td style="text-align: center"><button type="button" class="btn btn-danger"  >Back</button></td> 
-      <td style="text-align: center"><button type="button" class="btn btn-primary"  >Add Training</button></td> 
+      <td style="text-align: center"><button type="button" class="btn btn-primary" (click)="onNewTraining()" >Add Training</button> </td> 
       <td style="text-align: center"><button type="button"class="btn btn-primary" >Update Training</button> </td>
       <td style="text-align: center"><button type="button" class="btn btn-primary" >Cancel Training</button> </td>
       <td style="text-align: center"><button type="button" class="btn btn-primary" >Training Report</button> </td>
+    
     </div>
   </div>
+
   <div class="row">
     <div class="col-xs-12">
         <br>
       <table border = "2" >
         <tr>
-          <td style="width: 200px; text-align: center"> Training Report </td>
-          <td style="width: 200px; text-align: center"> Training Description </td>
-          <td style="width: 200px; text-align: center"> Target Audience </td>
-          <td style="width: 200px; text-align: center"> Training Framework </td>
-          <td style="width: 200px; text-align: center"> Training Method </td>
-          <td style="width: 200px; text-align: center"> Planned Date </td>
-          <td style="width: 200px; text-align: center"> Implementation </td>
-          <td style="width: 200px; text-align: center"> Reviewed By </td>
-          <td style="width: 200px; text-align: center"> Comments </td>
-          <td style="width: 50px; text-align: center">  </td>
+          <th style="width: 200px; text-align: center"> Subject </th>
+          <th style="width: 200px; text-align: center"> Department </th>
+          <th style="width: 200px; text-align: center"> Training Method (Seminar/Frontal) </th>
+          <th style="width: 200px; text-align: center"> Planned Date (Quarter) </th>
+          <th style="width: 200px; text-align: center"> Implementation Date (issued) </th>
+          <th style="width: 200px; text-align: center"> Reviewed By </th>
+          <th style="width: 200px; text-align: center"> Comments </th>
+         
         </tr>
       </table>
     </div>
   </div>
+ 

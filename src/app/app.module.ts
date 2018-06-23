@@ -25,6 +25,9 @@ import { DepartmentService } from './department-manager/department.service';
 import { StatusTableComponent } from './qa-manager/status-table/status-table.component';
 import { TrainingTableComponent } from './qa-manager/training-table/training-table.component';
 import { Certification2Component } from './qa-manager/certification/certification.component';
+import { TrainingNewComponent } from './qa-manager/training-table/training-new/training-new.component';
+import { TrainingTableService } from './qa-manager/training-table/training-table.service';
+
 
 
 
@@ -47,7 +50,8 @@ import { Certification2Component } from './qa-manager/certification/certificatio
     StatusReportComponent,
     StatusTableComponent,
     TrainingTableComponent,
-    Certification2Component
+    Certification2Component,
+    TrainingNewComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +61,7 @@ import { Certification2Component } from './qa-manager/certification/certificatio
     CommonModule,
     HttpClientModule
   ],
-  providers: [CalibrationService,DepartmentService],
+  providers: [CalibrationService,DepartmentService, TrainingTableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

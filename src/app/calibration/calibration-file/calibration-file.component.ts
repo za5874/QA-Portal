@@ -79,9 +79,7 @@ private initForm () {
       'manufacturer': new FormControl(calManufacturer, Validators.required),
       'standard': new FormControl(calStandard, Validators.required),
       'operation': new FormControl(calOperation, Validators.required),
-    //  'result': new FormControl(calResult, Validators.required)
-      
-    //  'ingredients' : recipeIngredients // because it is formArray
+  
 
     });
   }

@@ -15,6 +15,8 @@ import { TrainingReportComponent } from "./department-manager/training-report/tr
 import { Certification1Component } from "./qa-engineer/certification/certification.component";
 import { QaEngineerComponent } from "./qa-engineer/qa-engineer.component";
 import { StatusReportComponent } from "./qa-engineer/status-report/status-report.component";
+import { TrainingNewComponent } from "./qa-manager/training-table/training-new/training-new.component";
+
 //import { HomeComponent } from "./core/home/home.component";
 
 
@@ -33,8 +35,9 @@ const appRoutes: Routes = [
 
     { path: 'qa-manager', component: QaManagerComponent, children: [
         {path: 'status-table', component: StatusTableComponent},
-        {path: 'training-table', component: TrainingTableComponent},
-        { path: 'certificationB', component: Certification2Component},
+        {path: 'training-table', component: TrainingTableComponent},      
+        {path: 'training-table/training-new', component: TrainingNewComponent},      
+         {path: 'certificationB', component: Certification2Component},
     ] },
     { path: 'marketer', component: MarketerComponent }
     
