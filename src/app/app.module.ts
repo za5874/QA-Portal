@@ -19,6 +19,7 @@ import { CalibrationService } from './calibration/calibration.service';
 import { TrainingReportComponent } from './department-manager/training-report/training-report.component';
 import { Certification1Component } from './qa-engineer/certification/certification.component';
 import { StatusReportComponent } from './qa-engineer/status-report/status-report.component';
+import { QaEngineerService } from './qa-engineer/qa-engineer.service';
 
 import { DepartmentService } from './department-manager/department.service';
 
@@ -61,7 +62,8 @@ import { TrainingTableService } from './qa-manager/training-table/training-table
     CommonModule,
     HttpClientModule
   ],
-  providers: [CalibrationService,DepartmentService, TrainingTableService],
+ 
+  providers: [CalibrationService,DepartmentService, QaEngineerService, TrainingTableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
