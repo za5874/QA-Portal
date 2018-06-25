@@ -28,6 +28,8 @@ import { TrainingTableComponent } from './qa-manager/training-table/training-tab
 import { Certification2Component } from './qa-manager/certification/certification.component';
 import { TrainingNewComponent } from './qa-manager/training-table/training-new/training-new.component';
 import { TrainingTableService } from './qa-manager/training-table/training-table.service';
+import { TrainingEditComponent } from './qa-manager/training-table/training-edit/training-edit.component';
+
 
 
 
@@ -52,7 +54,8 @@ import { TrainingTableService } from './qa-manager/training-table/training-table
     StatusTableComponent,
     TrainingTableComponent,
     Certification2Component,
-    TrainingNewComponent
+    TrainingNewComponent,
+    TrainingEditComponent
   ],
   imports: [
     BrowserModule,

@@ -8,16 +8,16 @@ import { Subscription } from 'rxjs';
   templateUrl: './calibration-table.component.html',
   styleUrls: ['./calibration-table.component.css']
 })
-export class CalibrationTableComponent implements OnInit{//,OnDestroy {
+export class CalibrationTableComponent implements OnInit,OnDestroy {
 
    calibrationData : Calibration[];
-   subsctiption: Subscription; // store the subscription for destroy
+   subscription: Subscription; // store the subscription for destroy
     index : number =0;
     
   constructor(private calService: CalibrationService) { }
 
   ngOnInit() {
-    this.subsctiption =  this.calService.calibrationChanged /// !!! changes if there is edit/add recipe!
+    this.subscription =  this.calService.calibrationChanged /// !!! changes if there is edit/add recipe!
     .subscribe(
       (calibrationData: Calibration[]) => {
         this.calibrationData = calibrationData;
@@ -35,6 +35,8 @@ export class CalibrationTableComponent implements OnInit{//,OnDestroy {
     // if (this.calService.isResult(this.calibrationData[0].operation)) console.log("pass");
     // else console.log("false");
 
+  } // onInit
+  ngOnDestroy() { // for cleaning the subscription
+    this.subscription.unsubscribe();
   }
-
 }

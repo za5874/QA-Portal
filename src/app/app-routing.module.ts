@@ -35,8 +35,11 @@ const appRoutes: Routes = [
 
     { path: 'qa-manager', component: QaManagerComponent, children: [
         {path: 'status-table', component: StatusTableComponent},
-        {path: 'training-table', component: TrainingTableComponent},      
+        {path: 'training-table', component: TrainingTableComponent },      
         {path: 'training-table/training-new', component: TrainingNewComponent},      
+        { path: 'training-table:id', component: TrainingNewComponent},
+        { path: ':id/edit', component: TrainingNewComponent},
+      //  {path: 'training-table/edit', component: TrainingNewComponent},      
          {path: 'certificationB', component: Certification2Component},
     ] },
     { path: 'marketer', component: MarketerComponent }

@@ -10,7 +10,7 @@ import { CalibrationService } from '../calibration.service';
 })
 export class CalibrationFileComponent implements OnInit {
   calibrationForm: FormGroup;
-  dueDate = new Date();
+  dueDate : Date;
   @ViewChild('f') slForm: NgForm; // to get to the #f in the .html
   
   
@@ -42,9 +42,9 @@ export class CalibrationFileComponent implements OnInit {
     else this.calibrationForm.value.result = "Fail";
     
     
-     this.dueDate = this.calibrationForm.value.dateCalibration;
-
-     this.calibrationForm.value.dueDateCalibration = this.dueDate;
+     this.dueDate = new Date(this.calibrationForm.value.dateCalibration);
+    this.dueDate.setFullYear(this.dueDate.getFullYear()+1);
+     this.calibrationForm.value.dueDateCalibration = this.dueDate.toString();
    //  this.calibrationForm.value.dueDateCalibration = this.calService.setNextYear(this.dueDate);
       // this.dueDate.setFullYear(this.dueDate.getFullYear()+1);
      
