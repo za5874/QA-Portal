@@ -13,21 +13,23 @@
         <th>Manufacturer</th>
         <th>New Calibration Date</th>
         <th>Due Date</th>
-        <th>Interval</th>
+        <!-- <th>Interval</th> -->
         <th>Results</th>
       </tr>
       <tr *ngFor="let calibrationEl of calibrationData;">
       
         <td>{{calibrationEl.serialNum}}</td>
         <td>{{calibrationEl.toolName}}</td>
+        <td>{{calibrationEl.contactPerson}}</td>
+        <td>{{calibrationEl.department}}</td>
       
         <td>{{calibrationEl.manufacturer}}</td>
         <td>{{calibrationEl.dateCalibration | date : 'dd/MM/yyyy' }} </td>
         <td>{{calibrationEl.dueDateCalibration | date : 'dd/MM/yyyy' }}</td>
       
        
-        <td>{{calibrationEl.standard}}</td>
-        <td>{{calibrationEl.operation}}</td>
+        <!-- <td>{{calibrationEl.standard}}</td>
+        <td>{{calibrationEl.operation}}</td> -->
         <td *ngIf="calibrationEl.result === 'Pass'; else elseBlock " style="color: green">{{calibrationEl.result}}</td>
         <ng-template #elseBlock>
           <td ng-if="calibrationEl.result === 'Fail'" style="color: red">{{calibrationEl.result}}</td>

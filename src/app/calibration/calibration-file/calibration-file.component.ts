@@ -65,6 +65,8 @@ private initForm () {
     let calDueDateCalibration = '';
     let calToolName = '';
     let calSerialNum = '';
+    let calContactPerson = '';
+    let calDepartment = '';
     let calManufacturer = '';
     let calStandard = '';
     let calOperation = '';
@@ -76,6 +78,8 @@ private initForm () {
       'dueDateCalibration': new FormControl(new Date(calDueDateCalibration), Validators.required),
       'toolName': new FormControl(calToolName, Validators.required),
       'serialNum': new FormControl(calSerialNum, Validators.required),
+      'contactPerson': new FormControl(calContactPerson, Validators.required),
+      'department': new FormControl(calDepartment, Validators.required),
       'manufacturer': new FormControl(calManufacturer, Validators.required),
       'standard': new FormControl(calStandard, Validators.required),
       'operation': new FormControl(calOperation, Validators.required),

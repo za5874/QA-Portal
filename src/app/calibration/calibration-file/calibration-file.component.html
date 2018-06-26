@@ -15,7 +15,7 @@
     <!-- <form (ngSubmit)="onSubmit(f)" #f="ngForm"> -->
     <form [formGroup]="calibrationForm" (ngSubmit)="onSubmit()">
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-sm-3 form-group">
           <button type="submit" class="btn btn-success" >Submit</button>
           <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
         </div>
@@ -25,12 +25,25 @@
           <label for="dateCalibration">Date of Calibration</label> <!--class="form-control"-->
           <input type="date" id="dateCalibration" class="form-control" formControlName="dateCalibration" ngModel required>
         </div>
+
+        <div class="col-sm-3 form-group">
+          <label for="contactPerson">Contact Person</label>
+          <input type="text" id="contactPerson" class="form-control" formControlName="contactPerson" ngModel required>
+
+        </div>
       </div>
 
       <div class="row">
         <div class="col-sm-3 form-group">
           <label for="toolName">Tool Name</label>
           <input type="text" id="toolName" class="form-control" formControlName="toolName" ngModel required>
+
+        </div>
+
+        
+        <div class="col-sm-3 form-group">
+          <label for="department">Department</label>
+          <input type="text" id="department" class="form-control" formControlName="department" ngModel required>
 
         </div>
       </div>

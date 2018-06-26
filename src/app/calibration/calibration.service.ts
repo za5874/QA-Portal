@@ -5,10 +5,10 @@ import { Calibration } from "./calibration.model";
 @Injectable()
 export class CalibrationService {
     private date= new Date(2018,1,1);
-    private dueDate= new Date(2020,1,1);
+    private dueDate= new Date(2019,1,1);
     calibrationChanged = new Subject<Calibration[]>(); // for updateCalibration
 
-    private calibrations: Calibration[] = [new Calibration(this.date,this.dueDate, 'Nova', 1, 'NFZ', 20, 21, 'Pass')];
+    private calibrations: Calibration[] = [] ;//= [new Calibration(this.date,this.dueDate, 'Nova', 1, 'NFZ', 'Pass')];
 
 
     getCalibrationData() {
