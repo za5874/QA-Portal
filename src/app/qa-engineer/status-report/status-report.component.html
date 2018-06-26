@@ -1,87 +1,73 @@
 <form [formGroup]="reportForm" (ngSubmit)="onSubmit()">
     <div class="row">
-      <div class="col-xs-12">
-        <div class="form-group">
-          <td style="width: 200px; text-align: center">
+        <div class="col-sm-4 form-group">
             <label for="vendorName">Vendor Name :</label>
-          </td>
-          <td><input 
+            <input 
             type="text"
             id="vendorName"
             formControlName="vendorName"
             class="form-control"
             style="width: 300px"
             ngModel
-            required></td>
-            <td style="width: 200px; text-align: center">
+            required>
+          </div>
+            <div class="col-sm-3 form-group">
               <label for="location">Location :</label>
-            </td>
-            <td><input
+            <input
               type="text"
               id="location"
               formControlName="location"
               class="form-control"
               style="width: 300px"
               ngModel
-              required></td>
+              required>
         </div>
-      </div>
+
     </div>
     <div class="row">
-        <div class="col-xs-12">
-          <div class="form-group">
-            <td style="width: 200px; text-align: center">
+            <div class="col-sm-4 form-group">
               <label for="supplierClass">Supplier Class :</label>
-            </td>
-            <td><input
+              <input
               type="text"
               id="supplierClass"
               formControlName="supplierClass"
               class="form-control"
               style="width: 300px"
               ngModel
-              required></td>
-              <td style="width: 200px; text-align: center">
-                <label for="auditPlannedQuarter">Audit Planned Quarter : </label>
-              </td>
-              <td><input
+              required></div>
+              <div class="col-sm-3 form-group">
+              <label for="auditPlannedQuarter">Audit Planned Quarter : </label>
+              <input
                 type="text"
                 id="auditPlannedQuarter"
                 formControlName="auditPlannedQuarter"
-                class="form-control"
+                class="form-control" 
                 style="width: 300px"
                 ngModel
-                required></td>
-          </div>
-        </div>
-      </div>
+                required></div>
+     </div>
     <div class="row">
-      <div class="col-xs-12">
-        <div class="form-group">
-          <td style="width: 200px; text-align: center">
+      <div class="col-sm-4 form-group">
           <label for="lastAuditDate">Last Audit Date : </label>
-          </td>
-          <td><input
-            type="date"
-            id="lastAuditDate"
-            formControlName="lastAuditDate"
-            class="form-control"
-            style="width: 300px"
-            ngModel
-            required></td>
-            <td style="width: 200px; text-align: center">
-                <label for="newVendorApproval">New Vendor Approval : </label>
-              </td>
-              <td><input
+        <input
+          type="date"
+          id="lastAuditDate"
+          formControlName="lastAuditDate"
+          class="form-control"
+          style="width: 300px"
+          ngModel
+          required>
+          </div>
+          <div class="col-sm-3 form-group">
+          <label for="newVendorApproval">New Vendor Approval : </label>
+              <input
                 type="text"
                 id="newVendorApproval"
                 formControlName="newVendorApproval"
                 class="form-control"
                 style="width: 300px"
                 ngModel
-                required></td>
-
-        </div>
+                required>
       </div>
     </div>
     <div class="row">
